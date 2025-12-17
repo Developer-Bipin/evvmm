@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital EVM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+document.body.addEventListener("click", () => {
+  const beep = document.getElementById("beep");
+  const bg = document.getElementById("bgSound");
+
+  beep.play().then(()=>beep.pause()).catch(()=>{});
+  bg.play().then(()=>bg.pause()).catch(()=>{});
+}, { once:true });
+</script>
+
+
+<body>
+
+<!-- HEADER -->
+<div class="top-header">
+  कल्याण डोंबिवली महानगरपालिका निवडणूक २०२६<br>
+  <small>(Only for education purpose)</small>
+</div>
+
+<!-- INFO BARS -->
+<div class="bar blue">
+  <span>🖱️</span> डेमोच्या अधिक माहितीसाठी इथे क्लिक करा
+</div>
+
+<div class="bar red">
+  मतदानाच्या दिवशी सुद्धा घड्याळ या चिन्हासमोरील निळे बटन दाबावे
+</div>
+
+<div class="bar green" onclick="shareWhatsApp()">
+  Share on WhatsApp
+</div>
+
+<!-- TABLE HEADER -->
+<div class="table-header">
+  <div>S.No</div>
+  <div>Name of Candidate</div>
+  <div>Election Symbol</div>
+  <div>Bulb</div>
+  <div>Button</div>
+</div>
+
+<!-- ROW 1 -->
+<div class="row">
+  <div>5</div>
+  <div></div>
+  <div></div>
+  <div>⬅</div>
+  <div><div class="btn dummy"></div></div>
+</div>
+
+<div class="row">
+  <div>6</div>
+  <div></div>
+  <div></div>
+  <div>⬅</div>
+  <div><div class="btn dummy"></div></div>
+</div>
+
+<div class="row">
+  <div>7</div>
+  <div></div>
+  <div></div>
+  <div>⬅</div>
+  <div><div class="btn dummy"></div></div>
+</div>
+
+<div class="row">
+  <div>8</div>
+  <div></div>
+  <div></div>
+  <div>⬅</div>
+  <div><div class="btn dummy"></div></div>
+</div>
+
+<div class="row">
+  <div>9</div>
+  <div></div>
+  <div></div>
+  <div>⬅</div>
+  <div><div class="btn dummy"></div></div>
+</div>
+
+<div class="row selected" id="row2">
+  <div class="sno">10</div>
+
+  <div class="candidate">
+    <img src="images/candidate.jpeg" alt="Candidate">
+    <span>गणेश पांडुरंग जाधव</span>
+  </div>
+
+  <div>
+    <img class="symbol" src="image.png">
+  </div>
+
+  <div>
+    <span class="bulb" id="bulb2"></span> ⬅
+  </div>
+
+  <div>
+    <button class="vote-btn" onclick="vote(2)">बटन<br>दाबा</button>
+  </div>
+</div>
+
+<!-- EMPTY ROWS -->
+<script>
+for(let i=11;i<=11;i++){
+document.write(`
+<div class="row">
+  <div>${i}</div>
+  <div></div>
+  <div></div>
+  <div>⬅</div>
+  <div><div class="btn dummy"></div></div>
+</div>
+`);
+}
+</script>
+
+<!-- NOTA -->
+<div class="row">
+  <div>12</div>
+  <div class="nota">NOTA</div>
+  <div></div>
+  <div>⬅</div>
+  <div><div class="btn dummy"></div></div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  Dev. Upadhyay...
+</div>
+
+<!-- VVPAT OVERLAY -->
+<div id="vvpatOverlay" class="vvpat-overlay">
+  <div class="vvpat-box">
+    <img src="vvat.jpg" alt="VVPAT Slip">
+  </div>
+</div>
+
+<!-- VVPAT SOUND -->
+
+ <audio id="beep" preload="auto">
+  <source src="mixkit-appliance-ready-beep-1076.wav" type="audio/wav">
+  <source src="beep.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="bgSound" preload="auto">
+  <source src="demo mat daan.mp4" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>

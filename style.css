@@ -1,0 +1,166 @@
+*{
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  margin:0;
+  background:#f4f4f4;
+}
+
+/* HEADER */
+.top-header{
+  background:#fff;
+  padding:14px;
+  text-align:center;
+  font-weight:bold;
+}
+
+/* BARS */
+.bar{
+  padding:12px;
+  text-align:center;
+  font-weight:bold;
+  color:#fff;
+}
+
+.blue{background:#2f49ff;}
+.red{background:#f04c2e;}
+.green{background:#2ecc71; cursor:pointer;}
+
+/* TABLE HEADER */
+.table-header{
+  display:grid;
+  grid-template-columns:50px 2fr 90px 60px 90px;
+  background:#eee;
+  font-size:13px;
+  padding:8px;
+  font-weight:bold;
+}
+
+/* ROW */
+.row{
+  display:grid;
+  grid-template-columns:50px 2fr 90px 60px 90px;
+  align-items:center;
+  background:#fff;
+  border-bottom:1px solid #ddd;
+  padding:8px;
+}
+
+/* SELECTED */
+.selected{
+  background:#e2a789;
+}
+
+/* CANDIDATE */
+.candidate{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.candidate img{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius:6px;
+}
+
+/* SYMBOL */
+.symbol{
+  width:40px;
+}
+
+/* BULB */
+.bulb{
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#aaa;
+  display:inline-block;
+}
+
+/* BUTTON */
+.vote-btn{
+  background:#2f49ff;
+  color:#fff;
+  border:none;
+  padding:8px;
+  border-radius:8px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.vote-btn:active{
+  transform:scale(0.95);
+}
+
+.btn.dummy{
+  width:60px;
+  height:30px;
+  background:#2f49ff;
+  border-radius:8px;
+}
+
+/* NOTA */
+.nota{
+  font-weight:bold;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  padding:10px;
+  font-size:13px;
+  background:#fff;
+  color:#555;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .table-header,
+  .row{
+    grid-template-columns:40px 1.8fr 70px 50px 80px;
+  }
+}
+
+
+/* VVPAT OVERLAY */
+.vvpat-overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+
+.vvpat-box{
+  background:#fff;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+  animation:slideUp 0.4s ease;
+  max-width:90%;
+}
+
+.vvpat-box img{
+  width:100%;
+  max-width:300px;
+}
+
+.vvpat-box p{
+  margin-top:8px;
+  font-weight:bold;
+  color:#2c3e50;
+}
+
+@keyframes slideUp{
+  from{transform:translateY(40px); opacity:0;}
+  to{transform:translateY(0); opacity:1;}
+}
