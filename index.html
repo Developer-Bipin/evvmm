@@ -49,51 +49,29 @@ document.body.addEventListener("click", () => {
 
 <!-- ROW 1 -->
 <div class="row">
-  <div>5</div>
+  <div>1</div>
   <div></div>
   <div></div>
   <div>⬅</div>
   <div><div class="btn dummy"></div></div>
 </div>
 
+<!-- ROW 2 -->
 <div class="row">
-  <div>6</div>
+  <div>2</div>
   <div></div>
   <div></div>
   <div>⬅</div>
   <div><div class="btn dummy"></div></div>
 </div>
 
-<div class="row">
-  <div>7</div>
-  <div></div>
-  <div></div>
-  <div>⬅</div>
-  <div><div class="btn dummy"></div></div>
-</div>
-
-<div class="row">
-  <div>8</div>
-  <div></div>
-  <div></div>
-  <div>⬅</div>
-  <div><div class="btn dummy"></div></div>
-</div>
-
-<div class="row">
-  <div>9</div>
-  <div></div>
-  <div></div>
-  <div>⬅</div>
-  <div><div class="btn dummy"></div></div>
-</div>
-
-<div class="row selected" id="row2">
-  <div class="sno">10</div>
+<!-- ROW 3 : CANDIDATE -->
+<div class="row selected" id="row3">
+  <div class="sno">3</div>
 
   <div class="candidate">
     <img src="images/candidate.jpeg" alt="Candidate">
-    <span>गणेश पांडुरंग जाधव</span>
+    <span>जाधव गणेश पांडुरंग</span>
   </div>
 
   <div>
@@ -101,17 +79,17 @@ document.body.addEventListener("click", () => {
   </div>
 
   <div>
-    <span class="bulb" id="bulb2"></span> ⬅
+    <span class="bulb" id="bulb3"></span> ⬅
   </div>
 
   <div>
-    <button class="vote-btn" onclick="vote(2)">बटन<br>दाबा</button>
+    <button class="vote-btn" onclick="vote(3)">बटन<br>दाबा</button>
   </div>
 </div>
 
 <!-- EMPTY ROWS -->
 <script>
-for(let i=11;i<=11;i++){
+for(let i=6;i<=9;i++){
 document.write(`
 <div class="row">
   <div>${i}</div>
@@ -135,13 +113,13 @@ document.write(`
 
 <!-- FOOTER -->
 <div class="footer">
-  Dev. Upadhyay...
+  
 </div>
 
 <!-- VVPAT OVERLAY -->
 <div id="vvpatOverlay" class="vvpat-overlay">
   <div class="vvpat-box">
-    <img src="vvat.jpg" alt="VVPAT Slip">
+    <img src="WhatsApp Image 2026-01-04 at 4.39.39 PM.jpeg" alt="VVPAT Slip">
   </div>
 </div>
 
