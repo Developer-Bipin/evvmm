@@ -46,3 +46,21 @@ function vote(row){
     bgSound.currentTime = 0;
   }, 7000); // 3 sec beep + 4 sec VVPAT
 }
+function shareWhatsApp() {
+  const message = `
+🗳️ Digital EVM Demo 2026
+
+कल्याण डोंबिवली महानगरपालिका निवडणूक २०२६  
+(Only for education purpose)
+
+👉 डेमो पाहण्यासाठी खालील लिंक ओपन करा:
+${window.location.href}
+`;
+
+  const encodedMessage = encodeURIComponent(message);
+
+  // Works for mobile + desktop
+  const whatsappURL = `https://wa.me/?text=${encodedMessage}`;
+
+  window.open(whatsappURL, "_blank");
+}

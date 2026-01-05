@@ -27,6 +27,16 @@ body{
 .blue{background:#2f49ff;}
 .red{background:#f04c2e;}
 .green{background:#2ecc71; cursor:pointer;}
+.bar.green {
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.1s ease;
+}
+
+.bar.green:active {
+  transform: scale(0.97);
+}
+
 
 /* TABLE HEADER */
 .table-header{
